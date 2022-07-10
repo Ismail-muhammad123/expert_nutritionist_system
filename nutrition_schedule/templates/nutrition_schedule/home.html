@@ -1,0 +1,50 @@
+{% extends './base.html' %} {% block content %}
+
+<div class="container">
+  <main role="main" class="inner cover">
+    <h2>Expert Nutrition System.</h2>
+    <p class="lead">
+      A Web Program that takes the age, gender, and activity level of any child
+      between the age of 2 to 18 and generate a suggestion of the food
+      combination they should eat in a day, so as to attain the recomended
+      calories.
+    </p>
+  </main>
+  <form method="get" action="/result">
+    <h3>Fill In The Form Below</h3>
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input
+        value="0"
+        type="number"
+        class="form-control"
+        id="age"
+        name="age"
+        placeholder="Age"
+      />
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <label for="gender">Select Gender</label>
+        <select name="gender" id="gender" class="form-control">
+          <option>Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <label for="activity">Activity Level</label>
+        <select name="activity_level" id="activity" class="form-control">
+          <option>Activity Level</option>
+          <option value="1">Less Active</option>
+          <option value="2">Moderately Active</option>
+          <option value="3">Very Active</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary m-3">Submit</button>
+  </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends './base.html' %} {% block content %}
+<div class="container">
+  <h2 class="text-uppercase">Suggeted Food Items for a Day.</h2>
+  <h3 class="text-capitalize">Based on the information provided</h3>
+  <div class="text-center text-primary">
+    <p>
+      Age: <span>{{age}} |</span> Gender:
+      <span class="text-capitalize">{{gender}}</span>| Activity Level:
+      <span>
+        {%if activity_level == 1%} Less Active {%elif activity_level == 2%}
+        Moderately Active {% elif activity_level == 3 %} Very Active {% endif %}
+      </span>
+    </p>
+    <p>MINIMUM REQUIRED CALORIES: <span>{{min_required_calories}}</span></p>
+    <p>MAXIMUM REQUIRED CALORIES: <span>{{max_required_calories}}</span></p>
+    <p>
+      TOTAL CALORIES: <strong class="text-success">{{total_calories}}</strong>
+    </p>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-striped table-sm">
+      <thead>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Unit</th>
+        <th>Calories</th>
+      </thead>
+      {% for food in food_items %}
+      <tr>
+        <td>
+          {{food.name}}
+        </td>
+        <td>
+          {{food.category}}
+        </td>
+        <td>
+          {{food.unit}}
+        </td>
+        <td>
+          {{food.calories}}
+        </td>
+      </tr>
+      {% endfor%}
+    </table>
+  </div>
+</div>
+
+{% endblock %}
