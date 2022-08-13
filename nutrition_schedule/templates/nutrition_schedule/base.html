@@ -17,6 +17,7 @@
       href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+
     <style>
       body {
         background-color: antiquewhite;
@@ -32,6 +33,22 @@
       }
     </style>
   </head>
-  {% block content %} {% endblock %}
-  <body class="text-center"></body>
+  <body class="text-center">
+    {% block content %} {% endblock %}
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    $('#print-result-btn').click(function () {
+      $('#back-btn').hide()
+      $('#print-result-btn').hide()
+      window.print()
+      $('#back-btn').show()
+      $('#print-result-btn').show()
+      return false
+    })
+  </script>
 </html>
