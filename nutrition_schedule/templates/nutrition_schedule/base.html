@@ -8,9 +8,10 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico" />
 
-    <title>Expert Child Nutrition System</title>
+    <title>
+      {% block title %} Expert Child Nutrition System {% endblock %}
+    </title>
 
     <!-- Bootstrap core CSS -->
     <link
@@ -21,7 +22,6 @@
     <style>
       body {
         background-color: antiquewhite;
-        padding: 1rem;
       }
       h2 {
         font-weight: 800;
@@ -34,11 +34,50 @@
     </style>
   </head>
   <body class="text-center">
-    {% block content %} {% endblock %}
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">Child Nutrition App</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about_page' %}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'guide_page' %}">How To Use</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'search_page' %}">Search</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main class="align-items-center justify-content-center pt-3">
+      {% block content %} {% endblock %}
+    </main>
   </body>
   <script
     src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
     crossorigin="anonymous"
   ></script>
   <script>

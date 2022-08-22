@@ -142,28 +142,17 @@ def get_diet_schedule(request):
     return render(request, 'nutrition_schedule/result.html', context=context)
 
 
+def search(request):
+    return render(request, 'nutrition_schedule/search.html')
+
+
 def index(request):
-    return render(request, 'nutrition_schedule/home.html')
+    return render(request, 'nutrition_schedule/index.html')
 
-# def create_foods(request):
-#     # file = open(static('nutrients_csvfile.csv'))
-#     file = open('nutrition_schedule/static/nutrients_csvfile.csv')
-#     for index, line in enumerate(file.readlines()):
-#         print("[creating Item {}".format(index))
-#         try:
-#             food, measure, calories, category = line.split(",")
-#         except:
-#             continue
 
-#         if calories == "":
-#             continue
+def about(request):
+    return render(request, 'nutrition_schedule/about.html')
 
-#         calories = eval(calories)
 
-#         try:
-#             obj = FoodItem(name=food, calories=calories,
-#                            unit=measure, category=category)
-#             obj.save()
-#         except:
-#             continue
-#     return redirect('/')
+def guide(request):
+    return render(request, 'nutrition_schedule/guide.html')

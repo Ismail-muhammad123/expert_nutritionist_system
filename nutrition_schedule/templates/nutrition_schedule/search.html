@@ -1,17 +1,7 @@
-{% extends './base.html' %} {% block content %}
-
-<div class="container">
-  <main role="main" class="inner cover">
-    <h2>Expert Nutrition System.</h2>
-    <p class="lead">
-      A Web Program that takes the age, gender, and activity level of any child
-      between the age of 2 to 18 and generate a suggestion of the food
-      combination they should eat in a day, so as to attain the recomended
-      calories.
-    </p>
-  </main>
+{% extends './base.html' %} {% load static %} {% block content %}
+<div id="search-page" class="container">
   <form method="get" action="/result">
-    <h3>Fill In The Form Below</h3>
+    <h2>Fill In The Form Below</h2>
     <div class="form-group">
       <label for="age">Age</label>
       <input

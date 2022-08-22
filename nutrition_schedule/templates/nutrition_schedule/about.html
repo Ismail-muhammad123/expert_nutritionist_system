@@ -1,0 +1,32 @@
+{% extends './base.html' %}
+{%load static%} 
+{% block tittle %} 
+About 
+{% endblock %} {% block content %}
+<section class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card shadow rounded">
+        <img
+          src="{% static 'nutrition_schedule/Feeding.jpg' %}"
+          alt="feeding image"
+          class="card-header-image"
+        />
+        <div class="card-header">
+          <h3 class="text-center">
+            About This App
+          </h3>
+        </div>
+        <div class="card-body">
+          <p>
+            This app is about finding the right proportion of random foo
+            categories that will make up for the daily calorimetric requirments
+            of a child, depending on the gender, age and how active the child
+            is.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

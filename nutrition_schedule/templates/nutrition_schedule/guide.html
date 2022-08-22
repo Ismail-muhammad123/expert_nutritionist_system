@@ -1,0 +1,32 @@
+{% extends './base.html' %} 
+{%load static%} 
+{% block tittle %} About {% endblock %} 
+{% block content %}
+<section class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card shadow rounded">
+        <div class="card-header">
+          <h3 class="text-center text-primary">
+            How to Use This App
+          </h3>
+        </div>
+        <div class="card-body">
+          <p>
+            <a href="{% url 'search_page' %}">Goto the Search Page</a>, and
+            enter the age, select the gender and then activity level of the
+            child from the respective dropdown lists. Then click on the Submit
+            Button.
+          </p>
+          <p>
+            A page with your results containing the list of suggested food
+            items, generated at random will appear on the page. You can click on
+            the print button on the top right side of the screen to print the
+            result.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

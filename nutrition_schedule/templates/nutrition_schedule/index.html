@@ -1,0 +1,59 @@
+{% extends './base.html' %} {% load static %} {% block title %} Home
+{%endblock%} {% block content %}
+<section class="container">
+  <div class="row">
+    <div class="col-sm-11 col-lg-3 col-md-6 card">
+      <img
+        class="card-img-top"
+        src="{% static 'nutrition_schedule/Feeding.jpg' %}"
+        alt="Children Image"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Feed Children</h5>
+        <p class="card-text">
+          Feed children with what they need in order to prevent malnutrition.
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-11 col-lg-3 col-md-6 card">
+      <img
+        class="card-img-top"
+        src="{% static 'nutrition_schedule/child2.jpeg' %}"
+        alt="Children Image"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Balance Diet</h5>
+        <p class="card-text">
+          Kids need balance diet to grow well.
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-11 col-lg-3 col-md-6 card">
+      <img
+        class="card-img-top"
+        src="{% static 'nutrition_schedule/child3.jpeg' %}"
+        alt="Children Image"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Good Mood</h5>
+        <p class="card-text">
+          Feed them well to keep the in good mood.
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-11 col-lg-3 col-md-6 card">
+      <img
+        class="card-img-top"
+        src="{% static 'nutrition_schedule/child4.jpeg' %}"
+        alt="Children Image"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Good Health</h5>
+        <p class="card-text">
+          Good Diet helps prevent diseases.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
